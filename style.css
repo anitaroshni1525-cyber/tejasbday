@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("background.jpg") no-repeat center / cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+.overlay {
+  background: rgba(255,255,255,0.78);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  width: 92%;
+  max-width: 520px;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 6.5vw, 48px);
+  color: #ff4d6d;
+}
+
+button, a {
+  display: block;
+  margin: 14px auto;
+  padding: 16px 30px;
+  font-size: clamp(18px, 4.8vw, 26px);
+  border-radius: 32px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+video, img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}

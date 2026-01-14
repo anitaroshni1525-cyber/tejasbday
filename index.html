@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" src="song.mp3" loop></audio>
+<audio id="song2" src="song2.mp3" loop></audio>
+<audio id="song3" src="song3.mp3" loop></audio>
+
+<div class="overlay">
+
+  <!-- START SCREEN (FIX FOR FREEZE) -->
+  <div class="screen active" id="start">
+    <h1>Something special for you 💖</h1>
+    <button onclick="startExperience()">Start ▶</button>
+  </div>
+
+  <!-- VIDEO 1 -->
+  <div class="screen" id="screen-video1">
+    <video id="video1" src="video1.mp4" muted playsinline></video>
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div class="screen" id="screen-video2">
+    <video id="video2" src="video2.mp4" muted playsinline controls></video>
+    <button onclick="goMenu()">Go to Main Menu ⏭️</button>
+  </div>
+
+  <!-- MENU -->
+  <div class="screen" id="menu">
+    <h1>Choose Your Surprise 💖</h1>
+    <button onclick="openMessages()">Special Message</button>
+    <button onclick="openGuest()">Special Guest</button>
+    <button onclick="openGifts()">Gift 🎁</button>
+    <button onclick="openPlaylist()">Playlist 🎵</button>
+    <button onclick="openUs()">Us 💞</button>
+    <button onclick="backToVideo2()">⬅ Back to Video</button>
+  </div>
+
+  <!-- IMAGE GALLERY -->
+  <div class="screen" id="messages">
+    <img id="galleryImg" src="images/img1.jpg">
+    <div class="nav">
+      <button onclick="prevImg()">⬅ Previous</button>
+      <button onclick="nextImg()">Next ➡</button>
+    </div>
+    <button onclick="goMenu()">Back to Menu</button>
+  </div>
+
+  <!-- SPECIAL GUEST -->
+  <div class="screen" id="guest">
+    <video id="video3" src="video3.mp4" muted playsinline controls></video>
+    <button onclick="replayGuest()">Replay</button>
+    <button onclick="goMenu()">Back to Menu</button>
+  </div>
+
+  <!-- GIFTS -->
+  <div class="screen" id="gifts">
+    <h1>Your Gifts 🎁</h1>
+    <a href="pdfs/book1.pdf" target="_blank">📘 Book 1</a>
+    <a href="pdfs/book2.pdf" target="_blank">📗 Book 2</a>
+    <a href="pdfs/book3.pdf" target="_blank">📕 Book 3</a>
+    <a href="pdfs/book4.pdf" target="_blank">📙 Book 4</a>
+    <a href="pdfs/book5.pdf" target="_blank">📔 Book 5</a>
+    <a href="pdfs/book6.pdf" target="_blank">📓 Book 6</a>
+    <button onclick="goMenu()">Back to Menu</button>
+  </div>
+
+  <!-- PLAYLIST -->
+  <div class="screen" id="playlist">
+    <h1>For You 🎶</h1>
+    <a href="https://music.youtube.com/playlist?list=PLhtnvXC9djDiRANJdmmidbCzNhOwaHDy1&si=EJnLmy6jB2c4wjsL"
+       target="_blank">
+       ▶ Open Our Playlist
+    </a>
+    <button onclick="goMenu()">Back to Menu</button>
+  </div>
+
+  <!-- US -->
+  <div class="screen" id="us">
+    <img src="images/img6.jpg">
+    <button onclick="goMenu()">Back to Menu</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
